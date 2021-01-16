@@ -6,6 +6,7 @@
 package Repository;
 
 import Entity.Doctor;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author Lenovo
  */
-public class JDBCDoctorRepository {
+public class JDBCDoctorRepository extends JDBCConnection{
     
     Connection connection;
     DbContext dbContext;
@@ -36,13 +37,12 @@ public class JDBCDoctorRepository {
     }
     
     public void addDoctor(Doctor doctor) throws SQLException{
-        String sql = "insert into doctors (firstName,lastName,doctorCode) values(?,?,?)";
-        preparedStatement = (PreparedStatement)connection.prepareStatement(sql);
-        preparedStatement.setString(1,doctor.getFirstName());
-        preparedStatement.setString(2,doctor.getLastName());
-        preparedStatement.setString(3,doctor.getDoctorCode());
-        int result = preparedStatement.executeUpdate();
-        //statement.close();
+        
+        CallableStatement cs = connection.prepareCall("{call addDoctor(?,?,?)}");
+        cs.setString("first_name", doctor.getFirstName());
+        cs.setString("lastname_name", doctor.getLastName());
+        cs.setString("doctor_code", doctor.getDoctorCode());
+        cs.executeQuery();
         connection.close();
     }
     
@@ -51,12 +51,13 @@ public class JDBCDoctorRepository {
             statement = connection.createStatement();
             resultSet = statement.executeQuery("select firstName,lastName from doctors");
             ArrayList<Doctor> doctors = new ArrayList<>();
-            while (resultSet.next()) {
+            if(resultSet != null){
+                while (resultSet.next()) {
                 doctors.add(new Doctor(resultSet.getString("firstName"), 
                         resultSet.getString("lastName")));
-                
-                System.out.println(resultSet.getString("firstName") + resultSet.getString("lastName"));
+                }
             }
+            
             return doctors;
         } catch (SQLException exception) {
             dbContext.showErrorMessage(exception);
@@ -64,6 +65,14 @@ public class JDBCDoctorRepository {
             connection.close();
         }
         return null;
+    }
+
+    @Override
+    public String connectionStatus() throws SQLException {
+        if(connection.isClosed() == false)
+            return "Not Connected\n";
+        else
+            return "Connected\n";
     }
     
 }

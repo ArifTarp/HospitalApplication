@@ -12,7 +12,7 @@ import java.sql.Statement;
  *
  * @author Lenovo
  */
-public class JDBCAppManagerRepository {
+public class JDBCAppManagerRepository extends JDBCConnection{
     Connection connection;
     DbContext dbContext;
     Statement statement;
@@ -30,16 +30,27 @@ public class JDBCAppManagerRepository {
     }
 
     public Boolean validationUser(String userName, String password) throws SQLException {
-        String query = "SELECT * FROM appmanagers WHERE userName = ? and password = ?";
-        preparedStatement = connection.prepareStatement(query);
+        String query = "SELECT * FROM appmanagers WHERE userName = '" + userName+"' and password = '"+password+"'";
+        /*preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, userName);
-        preparedStatement.setString(2, password);
-        ResultSet rs = preparedStatement.executeQuery();
-        if(rs.next() == false){
-            return false;
+        preparedStatement.setString(2, password);s
+        System.out.println(preparedStatement);
+        ResultSet rs = preparedStatement.executeQuery();*/
+        Statement stmt=connection.createStatement();  
+        ResultSet rs=stmt.executeQuery(query);
+        boolean check = true;
+        
+        if(!rs.isBeforeFirst()){
+            check = false;
         }
-        else{
-            return true;
-        }
+        return true;
     }  
+
+    @Override
+    public String connectionStatus() throws SQLException {
+        if(connection.isClosed() == false)
+            return "Not Connected\n";
+        else
+            return "Connected\n";
+    }
 }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author Lenovo
  */
-public class JDBCPatientRepository {
+public class JDBCPatientRepository extends JDBCConnection{
     Connection connection;
     DbContext dbContext;
     Statement statement;
@@ -31,23 +31,24 @@ public class JDBCPatientRepository {
         }
     }
     
-    public void addPatient(Patient patient) throws SQLException {
-        String sql = "INSERT into patients (tcNo,firstName,lastName) values(?,?,?)";
+    public boolean addPatient(Patient patient) throws SQLException {
+        
+        String sql = "INSERT into patients (tcNo,firstName,lastName) values('"+patient.getTcNo()+"','"+patient.getFirstName()+"','"+patient.getLastName()+"')";
         preparedStatement = (PreparedStatement) connection.prepareStatement(sql);
-
-        preparedStatement.setString(1, patient.getTcNo());
-        preparedStatement.setString(2, patient.getFirstName());
-        preparedStatement.setString(3, patient.getLastName());
         int result = preparedStatement.executeUpdate();
-
-        //statement.close();
         connection.close();
+        if (result != 0) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     
     public ArrayList<Patient> getAllPatients() throws SQLException {
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT patients.firstName,patients.lastName,patients.tcNo from patients");
+            resultSet = statement.executeQuery("SELECT p.firstName,p.lastName,p.tcNo from patients p");
             ArrayList<Patient> patients = new ArrayList<>();
             while (resultSet.next()) {
                 patients.add(new Patient(resultSet.getString("tcNo"), resultSet.getString("firstName"),
@@ -65,14 +66,16 @@ public class JDBCPatientRepository {
     public ArrayList<PatientDetail> getAllPatientDetails() throws SQLException {
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select patients.firstName,patients.lastName,patients.tcNo,appointments.date,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.name\n"
+            String sql = "select patients.firstName,patients.lastName,patients.tcNo,appointments.appointmentdate,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.name\n"
                     + "from patients join appointments on appointments.patientid = patients.id\n"
                     + "join doctors on doctors.id = appointments.doctorid\n"
-                    + "join polyclinics on polyclinics.id = appointments.polyclinicid");
+                    + "join polyclinics on polyclinics.id = appointments.polyclinicid";
+
+            resultSet = statement.executeQuery(sql);
             ArrayList<PatientDetail> patients = new ArrayList<>();
             while (resultSet.next()) {
                 patients.add(new PatientDetail(resultSet.getString("tcNo"), resultSet.getString("firstName"),
-                        resultSet.getString("lastName"), resultSet.getString("doctorname"), resultSet.getString("doctorlastname"), resultSet.getString("date"),
+                        resultSet.getString("lastName"), resultSet.getString("doctorname"), resultSet.getString("doctorlastname"), resultSet.getString("appointmentdate"),
                         resultSet.getString("name")));
             }
 
@@ -99,14 +102,14 @@ public class JDBCPatientRepository {
     public ArrayList<PatientDetail> getAllPatientDetailByTcNo(String tcNo) throws SQLException {
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select patients.firstName,patients.lastName,patients.tcNo,appointments.date,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.name\n"
+            resultSet = statement.executeQuery("select patients.firstName,patients.lastName,patients.tcNo,appointments.appointmentdate,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.name\n"
                     + "from patients join appointments on appointments.patientid = patients.id\n"
                     + "join doctors on doctors.id = appointments.doctorid\n"
                     + "join polyclinics on polyclinics.id = appointments.polyclinicid where patients.tcNo = " + tcNo);
             ArrayList<PatientDetail> patients = new ArrayList<>();
             while (resultSet.next()) {
                 patients.add(new PatientDetail(resultSet.getString("tcNo"), resultSet.getString("firstName"),
-                        resultSet.getString("lastName"), resultSet.getString("doctorname"), resultSet.getString("doctorlastname"), resultSet.getString("date"),
+                        resultSet.getString("lastName"), resultSet.getString("doctorname"), resultSet.getString("doctorlastname"), resultSet.getString("appointmentdate"),
                         resultSet.getString("name")));
             }
 
@@ -146,4 +149,12 @@ public class JDBCPatientRepository {
         }
         return null;
     } 
+
+    @Override
+    public String connectionStatus() throws SQLException {
+        if(connection.isClosed() == false)
+            return "Not Connected\n";
+        else
+            return "Connected\n";
+    }
 }

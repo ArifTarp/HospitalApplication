@@ -428,6 +428,7 @@ public class MainContent extends javax.swing.JFrame {
             txtboxPatientLastName.setText("");
 
             repository.addPatient(patient);
+            
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
         }
@@ -482,14 +483,16 @@ public class MainContent extends javax.swing.JFrame {
     private void AddAppointmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddAppointmentButtonActionPerformed
         try {
             java.util.Date date = new SimpleDateFormat("yyyy/MM/dd").parse(txtboxAppointmentDate.getText());
-
             JDBCAppointmentRepository repository = new JDBCAppointmentRepository();
-            AppointmentDetail appointmentDetail = new AppointmentDetail(txtboxDoctorCode.getText(),txtboxPatientTcNo.getText(),txrboxPolyclinicName.getText(),new java.sql.Date(date.getTime()));
-
-//            txtboxAppointmentDate.setText("");
-//            txtboxPatientTcNo.setText("");
-//            txtboxDoctorCode.setText("");
-//            txrboxPolyclinicName.setText("");
+            
+            AppointmentDetail appointmentDetail = new AppointmentDetail(
+                    txtboxDoctorCode.getText(),txtboxPatientTcNo.getText(),txrboxPolyclinicName.getText(),new java.sql.Date(date.getTime())
+            );
+/*
+            txtboxAppointmentDate.setText("");
+            txtboxPatientTcNo.setText("");
+            txtboxDoctorCode.setText("");
+            txrboxPolyclinicName.setText("");*/
 
             repository.createAppointment(appointmentDetail);
         } catch (SQLException exception) {

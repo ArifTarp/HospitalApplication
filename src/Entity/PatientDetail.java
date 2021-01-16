@@ -18,7 +18,8 @@ public class PatientDetail {
     private String appointmentDate;
     private String polyclinicName;
 
-    public PatientDetail(String tcNo, String patientName, String patientLastName, String doctorName, String doctorLastName, String appointmentDate, String polyclinicName) {
+    public PatientDetail(String tcNo, String patientName, String patientLastName,
+                         String doctorName, String doctorLastName, String appointmentDate, String polyclinicName) {
         this.tcNo = tcNo;
         this.patientName = patientName;
         this.patientLastName = patientLastName;
