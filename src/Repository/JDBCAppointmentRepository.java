@@ -37,41 +37,54 @@ public class JDBCAppointmentRepository extends JDBCConnection{
     public void createAppointment(AppointmentDetail appointmentDetail) throws SQLException {
         String sqlGetDoctorId = "select id from doctors where lower(doctorCode)=" + "lower('" + appointmentDetail.getDoctorCode() + "')";
         String sqlGetPatientId = "select id from patients where tcNo = " + "'" + appointmentDetail.getPatiendTcNo() + "'";
-        String sqlGetPolyclinicId = "select id from polyclinics where lower(name) = lower('" + appointmentDetail.getPolyclinicName() + "')";
-        String sqlAddAppointment = "insert into appointments (id,doctorid,patientid,polyclinicid,appointmentdate) values(1,?,?,?,?)";
+        String sqlGetPolyclinicId = "select id from polyclinics where lower(nameOfClinic) = lower('" + appointmentDetail.getPolyclinicName() + "')";
+        String sqlAddAppointment = "insert into appointments (appointmentDate,doctorId,patientId,polyclinicId) values(?,?,?,?)";
         
         
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sqlGetDoctorId);
-        resultSet.next();
-        int doctorId = resultSet.getInt("id");   
+        int doctorId = 0;
+        while(resultSet.next()){
+            doctorId = resultSet.getInt("id");
+            System.out.println("DOCTOR ID  " + resultSet.getInt("id"));
+        }
         statement.close();
         
         
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sqlGetPatientId);
-        resultSet.next();
-        int patientId = resultSet.getInt("id");
+        int patientId = 0;
+        while(resultSet.next()){
+            patientId = resultSet.getInt("id");
+            System.out.println("patientId" + resultSet.getInt("id"));
+        }
         statement.close();
         
         
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sqlGetPolyclinicId);
-        resultSet.next();
-        int polyclinicId = resultSet.getInt("id");
+        int polyclinicId = 0;
+        while(resultSet.next()){
+            polyclinicId = resultSet.getInt("id");
+            System.out.println("polyclinicId" + resultSet.getInt("id"));
+        }
         statement.close();
         
-        
+        System.out.println(sqlGetDoctorId);
+        System.out.println(sqlGetPatientId);
+        System.out.println(sqlGetPolyclinicId);
+        System.out.println(sqlAddAppointment);
         preparedStatement = (PreparedStatement) connection.prepareStatement(sqlAddAppointment);
-        preparedStatement.setInt(1, doctorId);
-        preparedStatement.setInt(2, patientId);
-        preparedStatement.setInt(3, polyclinicId);
-        preparedStatement.setDate(4, appointmentDetail.getAppointmentDate());
+        preparedStatement.setDate(1, appointmentDetail.getAppointmentDate());
+        preparedStatement.setInt(2, doctorId);
+        preparedStatement.setInt(3, patientId);
+        preparedStatement.setInt(4, polyclinicId);   
 
         int result = preparedStatement.executeUpdate();
 
         System.out.println(result);
         connection.close();
+        
     }
 
     @Override

@@ -66,7 +66,7 @@ public class JDBCPatientRepository extends JDBCConnection{
     public ArrayList<PatientDetail> getAllPatientDetails() throws SQLException {
         try {
             statement = connection.createStatement();
-            String sql = "select patients.firstName,patients.lastName,patients.tcNo,appointments.appointmentdate,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.name\n"
+            String sql = "select patients.firstName,patients.lastName,patients.tcNo,appointments.appointmentdate,doctors.firstName as doctorname,doctors.lastName as doctorlastname,polyclinics.NAMEOFCLINIC\n"
                     + "from patients join appointments on appointments.patientid = patients.id\n"
                     + "join doctors on doctors.id = appointments.doctorid\n"
                     + "join polyclinics on polyclinics.id = appointments.polyclinicid";
@@ -76,7 +76,7 @@ public class JDBCPatientRepository extends JDBCConnection{
             while (resultSet.next()) {
                 patients.add(new PatientDetail(resultSet.getString("tcNo"), resultSet.getString("firstName"),
                         resultSet.getString("lastName"), resultSet.getString("doctorname"), resultSet.getString("doctorlastname"), resultSet.getString("appointmentdate"),
-                        resultSet.getString("name")));
+                        resultSet.getString("NAMEOFCLINIC")));
             }
 
             return patients;
