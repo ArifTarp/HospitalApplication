@@ -65,8 +65,11 @@ public class MainContent extends javax.swing.JFrame {
         txtboxAppointmentTcNo = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtboxAppointmentDoctorCode = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1450, 1000));
+        getContentPane().setLayout(null);
 
         SearchThePatientButton.setText("Hasta ara");
         SearchThePatientButton.addActionListener(new java.awt.event.ActionListener() {
@@ -74,8 +77,14 @@ public class MainContent extends javax.swing.JFrame {
                 SearchThePatientButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(SearchThePatientButton);
+        SearchThePatientButton.setBounds(275, 13, 87, 25);
 
         jLabel1.setText("Doktor adı");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(70, 680, 58, 16);
+        getContentPane().add(txtboxDoctorFirstName);
+        txtboxDoctorFirstName.setBounds(140, 680, 158, 22);
 
         DeleteThePatientButton.setText("Hasta sil");
         DeleteThePatientButton.addActionListener(new java.awt.event.ActionListener() {
@@ -83,8 +92,12 @@ public class MainContent extends javax.swing.JFrame {
                 DeleteThePatientButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(DeleteThePatientButton);
+        DeleteThePatientButton.setBounds(374, 13, 81, 25);
 
         jLabel2.setText("Doktor soyadı");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 720, 77, 16);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -107,7 +120,14 @@ public class MainContent extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 100, 1335, 513);
+        getContentPane().add(txtboxDoctorLastName);
+        txtboxDoctorLastName.setBounds(140, 720, 158, 22);
+
         jLabel3.setText("Doktor kodu");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(60, 760, 68, 16);
 
         ListOfPatientButton.setLabel("Hastaları listele");
         ListOfPatientButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,8 +135,14 @@ public class MainContent extends javax.swing.JFrame {
                 ListOfPatientButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(ListOfPatientButton);
+        ListOfPatientButton.setBounds(790, 20, 157, 25);
+        getContentPane().add(txtboxDoctorCode);
+        txtboxDoctorCode.setBounds(140, 760, 158, 22);
 
         lblPatientTcNo.setText("Hasta Tcno");
+        getContentPane().add(lblPatientTcNo);
+        lblPatientTcNo.setBounds(500, 760, 64, 16);
 
         SearchTheAppointmentButton.setText("Randevu ara");
         SearchTheAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -124,10 +150,22 @@ public class MainContent extends javax.swing.JFrame {
                 SearchTheAppointmentButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(SearchTheAppointmentButton);
+        SearchTheAppointmentButton.setBounds(149, 45, 105, 25);
+        getContentPane().add(txtboxPatientTcNo);
+        txtboxPatientTcNo.setBounds(570, 760, 158, 22);
 
         jLabel8.setText("Hasta adı");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(510, 680, 53, 16);
+        getContentPane().add(txtboxPatientFirstName);
+        txtboxPatientFirstName.setBounds(570, 680, 158, 22);
 
         jLabel9.setText("Hasta soyadı");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(490, 720, 72, 16);
+        getContentPane().add(txtboxPatientLastName);
+        txtboxPatientLastName.setBounds(570, 720, 158, 22);
 
         AddDoctorButton.setText("Doktor ekle");
         AddDoctorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -135,6 +173,8 @@ public class MainContent extends javax.swing.JFrame {
                 AddDoctorButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(AddDoctorButton);
+        AddDoctorButton.setBounds(160, 800, 97, 25);
 
         AddillButton.setText("Hasta ekle");
         AddillButton.addActionListener(new java.awt.event.ActionListener() {
@@ -142,8 +182,14 @@ public class MainContent extends javax.swing.JFrame {
                 AddillButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(AddillButton);
+        AddillButton.setBounds(600, 800, 91, 25);
+        getContentPane().add(txtboxPatientIdentityNumber);
+        txtboxPatientIdentityNumber.setBounds(149, 14, 108, 22);
 
         jLabel4.setText("Hasta kimlik numarası");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(12, 17, 125, 16);
 
         ListOfAppointmentButton.setLabel("Randevuları listele");
         ListOfAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +197,8 @@ public class MainContent extends javax.swing.JFrame {
                 ListOfAppointmentButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(ListOfAppointmentButton);
+        ListOfAppointmentButton.setBounds(980, 20, 157, 25);
 
         ListOfDoctorButton.setText("Doktroları lsitele");
         ListOfDoctorButton.setActionCommand("Doktorları listele");
@@ -159,12 +207,22 @@ public class MainContent extends javax.swing.JFrame {
                 ListOfDoctorButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(ListOfDoctorButton);
+        ListOfDoctorButton.setBounds(1160, 20, 157, 25);
 
         jLabel5.setText("Randevu zamanı");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(910, 720, 94, 16);
 
         txtboxAppointmentDate.setToolTipText("");
+        getContentPane().add(txtboxAppointmentDate);
+        txtboxAppointmentDate.setBounds(1020, 720, 158, 22);
 
         jLabel6.setText("Poliklinik adı");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(940, 680, 69, 16);
+        getContentPane().add(txrboxPolyclinicName);
+        txrboxPolyclinicName.setBounds(1020, 680, 158, 22);
 
         AddAppointmentButton.setText("Randevu ekle");
         AddAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
@@ -172,176 +230,25 @@ public class MainContent extends javax.swing.JFrame {
                 AddAppointmentButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(AddAppointmentButton);
+        AddAppointmentButton.setBounds(1040, 840, 109, 25);
 
         lblPatientTcNo1.setText("Hasta Tcno");
+        getContentPane().add(lblPatientTcNo1);
+        lblPatientTcNo1.setBounds(950, 760, 64, 16);
+        getContentPane().add(txtboxAppointmentTcNo);
+        txtboxAppointmentTcNo.setBounds(1020, 760, 158, 22);
 
         jLabel7.setText("Doktor kodu");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(940, 800, 68, 16);
+        getContentPane().add(txtboxAppointmentDoctorCode);
+        txtboxAppointmentDoctorCode.setBounds(1020, 800, 158, 22);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(969, 969, 969)
-                        .addComponent(ListOfAppointmentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ListOfDoctorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1335, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(AddDoctorButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtboxDoctorFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtboxDoctorLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtboxDoctorCode, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 351, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(lblPatientTcNo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtboxPatientTcNo, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtboxPatientFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(jLabel9)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtboxPatientLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(AddillButton)))
-                .addGap(142, 142, 142)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtboxAppointmentDoctorCode, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(lblPatientTcNo1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtboxAppointmentTcNo, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txrboxPolyclinicName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtboxAppointmentDate, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(AddAppointmentButton)
-                        .addGap(33, 33, 33)))
-                .addGap(101, 101, 101))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel4)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(SearchTheAppointmentButton)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(txtboxPatientIdentityNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(SearchThePatientButton)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(DeleteThePatientButton)
-                            .addGap(333, 333, 333)
-                            .addComponent(ListOfPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(426, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ListOfAppointmentButton)
-                    .addComponent(ListOfDoctorButton))
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(txrboxPolyclinicName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtboxAppointmentDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPatientTcNo1)
-                            .addComponent(txtboxAppointmentTcNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtboxAppointmentDoctorCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
-                        .addGap(18, 18, 18)
-                        .addComponent(AddAppointmentButton))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtboxDoctorFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtboxDoctorLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtboxDoctorCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3))
-                                .addGap(18, 18, 18)
-                                .addComponent(AddDoctorButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(txtboxPatientFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel9)
-                                    .addComponent(txtboxPatientLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblPatientTcNo)
-                                    .addComponent(txtboxPatientTcNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(AddillButton)))
-                        .addGap(35, 35, 35)))
-                .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtboxPatientIdentityNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4)
-                        .addComponent(SearchThePatientButton)
-                        .addComponent(DeleteThePatientButton)
-                        .addComponent(ListOfPatientButton))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(SearchTheAppointmentButton)
-                    .addContainerGap(780, Short.MAX_VALUE)))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SwingUI/background/main-backgorund.jpg"))); // NOI18N
+        jLabel10.setPreferredSize(new java.awt.Dimension(1500, 800));
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, 0, 1430, 1000);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -575,6 +482,7 @@ public class MainContent extends javax.swing.JFrame {
     private javax.swing.JButton SearchTheAppointmentButton;
     private javax.swing.JButton SearchThePatientButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
