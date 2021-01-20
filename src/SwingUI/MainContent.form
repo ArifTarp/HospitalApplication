@@ -31,6 +31,12 @@
     <Component class="javax.swing.JButton" name="SearchThePatientButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hasta ara"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchThePatientButtonActionPerformed"/>
@@ -61,6 +67,12 @@
     <Component class="javax.swing.JButton" name="DeleteThePatientButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hasta sil"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteThePatientButtonActionPerformed"/>
@@ -106,6 +118,9 @@
                 <Column editable="true" title="Poliklinik ad&#x131;" type="java.lang.Object"/>
               </Table>
             </Property>
+            <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="0" type="rgb"/>
+            </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
@@ -132,6 +147,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="ListOfPatientButton">
       <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="Hastalar&#x131; listele"/>
       </Properties>
       <Events>
@@ -163,6 +184,12 @@
     <Component class="javax.swing.JButton" name="SearchTheAppointmentButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Randevu ara"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchTheAppointmentButtonActionPerformed"/>
@@ -217,6 +244,12 @@
     <Component class="javax.swing.JButton" name="AddDoctorButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Doktor ekle"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddDoctorButtonActionPerformed"/>
@@ -230,6 +263,12 @@
     <Component class="javax.swing.JButton" name="AddillButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hasta ekle"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddillButtonActionPerformed"/>
@@ -259,6 +298,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="ListOfAppointmentButton">
       <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="label" type="java.lang.String" value="Randevular&#x131; listele"/>
       </Properties>
       <Events>
@@ -274,6 +319,12 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Doktrolar&#x131; lsitele"/>
         <Property name="actionCommand" type="java.lang.String" value="Doktorlar&#x131; listele"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ListOfDoctorButtonActionPerformed"/>
@@ -324,6 +375,12 @@
     <Component class="javax.swing.JButton" name="AddAppointmentButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Randevu ekle"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddAppointmentButtonActionPerformed"/>

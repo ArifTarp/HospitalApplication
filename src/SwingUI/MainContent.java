@@ -72,13 +72,15 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         SearchThePatientButton.setText("Hasta ara");
+        SearchThePatientButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SearchThePatientButton.setContentAreaFilled(false);
         SearchThePatientButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchThePatientButtonActionPerformed(evt);
             }
         });
         getContentPane().add(SearchThePatientButton);
-        SearchThePatientButton.setBounds(275, 13, 87, 25);
+        SearchThePatientButton.setBounds(275, 13, 57, 19);
 
         jLabel1.setText("Doktor adı");
         getContentPane().add(jLabel1);
@@ -87,13 +89,15 @@ public class MainContent extends javax.swing.JFrame {
         txtboxDoctorFirstName.setBounds(140, 680, 158, 22);
 
         DeleteThePatientButton.setText("Hasta sil");
+        DeleteThePatientButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        DeleteThePatientButton.setContentAreaFilled(false);
         DeleteThePatientButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DeleteThePatientButtonActionPerformed(evt);
             }
         });
         getContentPane().add(DeleteThePatientButton);
-        DeleteThePatientButton.setBounds(374, 13, 81, 25);
+        DeleteThePatientButton.setBounds(374, 13, 51, 19);
 
         jLabel2.setText("Doktor soyadı");
         getContentPane().add(jLabel2);
@@ -118,6 +122,7 @@ public class MainContent extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setGridColor(new java.awt.Color(0, 204, 255));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
@@ -129,6 +134,8 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 760, 68, 16);
 
+        ListOfPatientButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ListOfPatientButton.setContentAreaFilled(false);
         ListOfPatientButton.setLabel("Hastaları listele");
         ListOfPatientButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +143,7 @@ public class MainContent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ListOfPatientButton);
-        ListOfPatientButton.setBounds(790, 20, 157, 25);
+        ListOfPatientButton.setBounds(790, 20, 157, 19);
         getContentPane().add(txtboxDoctorCode);
         txtboxDoctorCode.setBounds(140, 760, 158, 22);
 
@@ -145,13 +152,15 @@ public class MainContent extends javax.swing.JFrame {
         lblPatientTcNo.setBounds(500, 760, 64, 16);
 
         SearchTheAppointmentButton.setText("Randevu ara");
+        SearchTheAppointmentButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SearchTheAppointmentButton.setContentAreaFilled(false);
         SearchTheAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchTheAppointmentButtonActionPerformed(evt);
             }
         });
         getContentPane().add(SearchTheAppointmentButton);
-        SearchTheAppointmentButton.setBounds(149, 45, 105, 25);
+        SearchTheAppointmentButton.setBounds(149, 45, 75, 19);
         getContentPane().add(txtboxPatientTcNo);
         txtboxPatientTcNo.setBounds(570, 760, 158, 22);
 
@@ -168,22 +177,26 @@ public class MainContent extends javax.swing.JFrame {
         txtboxPatientLastName.setBounds(570, 720, 158, 22);
 
         AddDoctorButton.setText("Doktor ekle");
+        AddDoctorButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AddDoctorButton.setContentAreaFilled(false);
         AddDoctorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddDoctorButtonActionPerformed(evt);
             }
         });
         getContentPane().add(AddDoctorButton);
-        AddDoctorButton.setBounds(160, 800, 97, 25);
+        AddDoctorButton.setBounds(160, 800, 67, 19);
 
         AddillButton.setText("Hasta ekle");
+        AddillButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AddillButton.setContentAreaFilled(false);
         AddillButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddillButtonActionPerformed(evt);
             }
         });
         getContentPane().add(AddillButton);
-        AddillButton.setBounds(600, 800, 91, 25);
+        AddillButton.setBounds(600, 800, 61, 19);
         getContentPane().add(txtboxPatientIdentityNumber);
         txtboxPatientIdentityNumber.setBounds(149, 14, 108, 22);
 
@@ -191,6 +204,8 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(12, 17, 125, 16);
 
+        ListOfAppointmentButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ListOfAppointmentButton.setContentAreaFilled(false);
         ListOfAppointmentButton.setLabel("Randevuları listele");
         ListOfAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,17 +213,19 @@ public class MainContent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ListOfAppointmentButton);
-        ListOfAppointmentButton.setBounds(980, 20, 157, 25);
+        ListOfAppointmentButton.setBounds(980, 20, 157, 19);
 
         ListOfDoctorButton.setText("Doktroları lsitele");
         ListOfDoctorButton.setActionCommand("Doktorları listele");
+        ListOfDoctorButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ListOfDoctorButton.setContentAreaFilled(false);
         ListOfDoctorButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ListOfDoctorButtonActionPerformed(evt);
             }
         });
         getContentPane().add(ListOfDoctorButton);
-        ListOfDoctorButton.setBounds(1160, 20, 157, 25);
+        ListOfDoctorButton.setBounds(1160, 20, 157, 19);
 
         jLabel5.setText("Randevu zamanı");
         getContentPane().add(jLabel5);
@@ -225,13 +242,15 @@ public class MainContent extends javax.swing.JFrame {
         txrboxPolyclinicName.setBounds(1020, 680, 158, 22);
 
         AddAppointmentButton.setText("Randevu ekle");
+        AddAppointmentButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        AddAppointmentButton.setContentAreaFilled(false);
         AddAppointmentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddAppointmentButtonActionPerformed(evt);
             }
         });
         getContentPane().add(AddAppointmentButton);
-        AddAppointmentButton.setBounds(1040, 840, 109, 25);
+        AddAppointmentButton.setBounds(1040, 840, 79, 19);
 
         lblPatientTcNo1.setText("Hasta Tcno");
         getContentPane().add(lblPatientTcNo1);
