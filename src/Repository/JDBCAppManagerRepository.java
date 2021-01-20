@@ -31,19 +31,15 @@ public class JDBCAppManagerRepository extends JDBCConnection{
 
     public Boolean validationUser(String userName, String password) throws SQLException {
         String query = "SELECT * FROM appmanagers WHERE userName = '" + userName+"' and password = '"+password+"'";
-        /*preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setString(1, userName);
-        preparedStatement.setString(2, password);s
-        System.out.println(preparedStatement);
-        ResultSet rs = preparedStatement.executeQuery();*/
-        Statement stmt=connection.createStatement();  
-        ResultSet rs=stmt.executeQuery(query);
+
+        statement=connection.createStatement();  
+        ResultSet rs = statement.executeQuery(query);
         boolean check = true;
         
         if(!rs.isBeforeFirst()){
             check = false;
         }
-        return true;
+        return check;
     }  
 
     @Override

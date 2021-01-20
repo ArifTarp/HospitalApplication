@@ -70,10 +70,7 @@ public class JDBCAppointmentRepository extends JDBCConnection{
         }
         statement.close();
         
-        System.out.println(sqlGetDoctorId);
-        System.out.println(sqlGetPatientId);
-        System.out.println(sqlGetPolyclinicId);
-        System.out.println(sqlAddAppointment);
+        System.out.println("dateeeeeeeeeeeeeeeeeeeeeeeeee     " + appointmentDetail.getAppointmentDate());
         preparedStatement = (PreparedStatement) connection.prepareStatement(sqlAddAppointment);
         preparedStatement.setDate(1, appointmentDetail.getAppointmentDate());
         preparedStatement.setInt(2, doctorId);
