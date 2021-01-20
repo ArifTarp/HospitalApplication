@@ -2,3 +2,5 @@
 ---
 Db: Oracle SQL Developer  
 UI: Java Swing  
+
+![alt text](https://github.com/ArifTarp/HospitalApplication/blob/master/screens%20shots/login_screen.JPG)
