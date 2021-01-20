@@ -9,4 +9,4 @@ Login Screen
 
 Main Screen
 ---
-![alt text](https://github.com/ArifTarp/HospitalApplication/blob/master/screens%20shots/main_screen.JPG)
+![alt text](https://github.com/ArifTarp/HospitalApplication/blob/master/screens%20shots/mainScreen.JPG)
