@@ -60,7 +60,7 @@
     <Component class="javax.swing.JTextField" name="txtboxDoctorFirstName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="680" width="158" height="-1"/>
+          <AbsoluteConstraints x="140" y="680" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -131,7 +131,7 @@
     <Component class="javax.swing.JTextField" name="txtboxDoctorLastName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="720" width="158" height="-1"/>
+          <AbsoluteConstraints x="140" y="720" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -167,7 +167,7 @@
     <Component class="javax.swing.JTextField" name="txtboxDoctorCode">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="760" width="158" height="-1"/>
+          <AbsoluteConstraints x="140" y="760" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -203,7 +203,7 @@
     <Component class="javax.swing.JTextField" name="txtboxPatientTcNo">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="570" y="760" width="158" height="-1"/>
+          <AbsoluteConstraints x="570" y="760" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -220,7 +220,7 @@
     <Component class="javax.swing.JTextField" name="txtboxPatientFirstName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="570" y="680" width="158" height="-1"/>
+          <AbsoluteConstraints x="570" y="680" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -237,7 +237,7 @@
     <Component class="javax.swing.JTextField" name="txtboxPatientLastName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="570" y="720" width="158" height="-1"/>
+          <AbsoluteConstraints x="570" y="720" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -256,7 +256,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="160" y="800" width="-1" height="-1"/>
+          <AbsoluteConstraints x="180" y="810" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -275,7 +275,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="600" y="800" width="-1" height="-1"/>
+          <AbsoluteConstraints x="610" y="810" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -351,7 +351,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1020" y="720" width="158" height="-1"/>
+          <AbsoluteConstraints x="1020" y="720" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -368,7 +368,7 @@
     <Component class="javax.swing.JTextField" name="txrboxPolyclinicName">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1020" y="680" width="158" height="-1"/>
+          <AbsoluteConstraints x="1020" y="680" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -387,7 +387,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1040" y="840" width="-1" height="-1"/>
+          <AbsoluteConstraints x="1060" y="850" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -404,7 +404,7 @@
     <Component class="javax.swing.JTextField" name="txtboxAppointmentTcNo">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1020" y="760" width="158" height="-1"/>
+          <AbsoluteConstraints x="1020" y="760" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -421,7 +421,7 @@
     <Component class="javax.swing.JTextField" name="txtboxAppointmentDoctorCode">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="1020" y="800" width="158" height="-1"/>
+          <AbsoluteConstraints x="1020" y="800" width="158" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

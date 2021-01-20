@@ -86,7 +86,7 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(70, 680, 58, 16);
         getContentPane().add(txtboxDoctorFirstName);
-        txtboxDoctorFirstName.setBounds(140, 680, 158, 22);
+        txtboxDoctorFirstName.setBounds(140, 680, 158, 30);
 
         DeleteThePatientButton.setText("Hasta sil");
         DeleteThePatientButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -128,7 +128,7 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 100, 1335, 513);
         getContentPane().add(txtboxDoctorLastName);
-        txtboxDoctorLastName.setBounds(140, 720, 158, 22);
+        txtboxDoctorLastName.setBounds(140, 720, 158, 30);
 
         jLabel3.setText("Doktor kodu");
         getContentPane().add(jLabel3);
@@ -145,7 +145,7 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(ListOfPatientButton);
         ListOfPatientButton.setBounds(790, 20, 157, 19);
         getContentPane().add(txtboxDoctorCode);
-        txtboxDoctorCode.setBounds(140, 760, 158, 22);
+        txtboxDoctorCode.setBounds(140, 760, 158, 30);
 
         lblPatientTcNo.setText("Hasta Tcno");
         getContentPane().add(lblPatientTcNo);
@@ -162,19 +162,19 @@ public class MainContent extends javax.swing.JFrame {
         getContentPane().add(SearchTheAppointmentButton);
         SearchTheAppointmentButton.setBounds(149, 45, 75, 19);
         getContentPane().add(txtboxPatientTcNo);
-        txtboxPatientTcNo.setBounds(570, 760, 158, 22);
+        txtboxPatientTcNo.setBounds(570, 760, 158, 30);
 
         jLabel8.setText("Hasta adı");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(510, 680, 53, 16);
         getContentPane().add(txtboxPatientFirstName);
-        txtboxPatientFirstName.setBounds(570, 680, 158, 22);
+        txtboxPatientFirstName.setBounds(570, 680, 158, 30);
 
         jLabel9.setText("Hasta soyadı");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(490, 720, 72, 16);
         getContentPane().add(txtboxPatientLastName);
-        txtboxPatientLastName.setBounds(570, 720, 158, 22);
+        txtboxPatientLastName.setBounds(570, 720, 158, 30);
 
         AddDoctorButton.setText("Doktor ekle");
         AddDoctorButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -185,7 +185,7 @@ public class MainContent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(AddDoctorButton);
-        AddDoctorButton.setBounds(160, 800, 67, 19);
+        AddDoctorButton.setBounds(180, 810, 67, 19);
 
         AddillButton.setText("Hasta ekle");
         AddillButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -196,7 +196,7 @@ public class MainContent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(AddillButton);
-        AddillButton.setBounds(600, 800, 61, 19);
+        AddillButton.setBounds(610, 810, 61, 19);
         getContentPane().add(txtboxPatientIdentityNumber);
         txtboxPatientIdentityNumber.setBounds(149, 14, 108, 22);
 
@@ -233,13 +233,13 @@ public class MainContent extends javax.swing.JFrame {
 
         txtboxAppointmentDate.setToolTipText("");
         getContentPane().add(txtboxAppointmentDate);
-        txtboxAppointmentDate.setBounds(1020, 720, 158, 22);
+        txtboxAppointmentDate.setBounds(1020, 720, 158, 30);
 
         jLabel6.setText("Poliklinik adı");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(940, 680, 69, 16);
         getContentPane().add(txrboxPolyclinicName);
-        txrboxPolyclinicName.setBounds(1020, 680, 158, 22);
+        txrboxPolyclinicName.setBounds(1020, 680, 158, 30);
 
         AddAppointmentButton.setText("Randevu ekle");
         AddAppointmentButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -250,19 +250,19 @@ public class MainContent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(AddAppointmentButton);
-        AddAppointmentButton.setBounds(1040, 840, 79, 19);
+        AddAppointmentButton.setBounds(1060, 850, 79, 19);
 
         lblPatientTcNo1.setText("Hasta Tcno");
         getContentPane().add(lblPatientTcNo1);
         lblPatientTcNo1.setBounds(950, 760, 64, 16);
         getContentPane().add(txtboxAppointmentTcNo);
-        txtboxAppointmentTcNo.setBounds(1020, 760, 158, 22);
+        txtboxAppointmentTcNo.setBounds(1020, 760, 158, 30);
 
         jLabel7.setText("Doktor kodu");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(940, 800, 68, 16);
         getContentPane().add(txtboxAppointmentDoctorCode);
-        txtboxAppointmentDoctorCode.setBounds(1020, 800, 158, 22);
+        txtboxAppointmentDoctorCode.setBounds(1020, 800, 158, 30);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SwingUI/background/main-backgorund.jpg"))); // NOI18N
         jLabel10.setPreferredSize(new java.awt.Dimension(1500, 800));
