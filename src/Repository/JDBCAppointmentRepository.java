@@ -70,7 +70,7 @@ public class JDBCAppointmentRepository extends JDBCConnection{
         }
         statement.close();
         
-        System.out.println("dateeeeeeeeeeeeeeeeeeeeeeeeee     " + appointmentDetail.getAppointmentDate());
+
         preparedStatement = (PreparedStatement) connection.prepareStatement(sqlAddAppointment);
         preparedStatement.setDate(1, appointmentDetail.getAppointmentDate());
         preparedStatement.setInt(2, doctorId);
@@ -79,9 +79,7 @@ public class JDBCAppointmentRepository extends JDBCConnection{
 
         int result = preparedStatement.executeUpdate();
 
-        System.out.println(result);
         connection.close();
-        
     }
 
     @Override

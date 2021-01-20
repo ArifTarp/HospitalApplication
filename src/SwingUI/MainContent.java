@@ -442,9 +442,9 @@ public class MainContent extends javax.swing.JFrame {
             );
 
             txtboxAppointmentDate.setText("");
-            txtboxPatientTcNo.setText("");
-            txtboxDoctorCode.setText("");
+            txtboxAppointmentTcNo.setText("");
             txrboxPolyclinicName.setText("");
+            txtboxAppointmentDoctorCode.setText("");
 
             repository.createAppointment(appointmentDetail);
         } catch (SQLException exception) {
