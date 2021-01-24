@@ -3,8 +3,8 @@
 Db: Oracle SQL Developer  
 UI: Java Swing  
 IDE: NetBeans  
-JDK: 1.8  
-OJDBC: 7
+JDK Version: 1.8  
+OJDBC Version: 7
 
 Login Screen
 ---
